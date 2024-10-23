@@ -1,14 +1,14 @@
 .section .data
-str1 : .string " Digite dois numeros :\ n "
-str2 : .string " % d % d "
-str3 : .string " Os numeros digitados foram % d % d \ n "
+str1 : .string " Digite dois numeros :\n"
+str2 : .string " %d %d"
+str3 : .string " Os numeros digitados foram %d %d \n "
 .section .text
 .globl main
 main:
-pushq % rbp
-movq % rsp , % rbp
- subq $16 , % rsp
- mov $str1 , % rdi
+pushq %rbp
+movq %rsp , %rbp
+ subq $16 , %rsp
+ mov $str1 , %rdi
  call printf
  movq % rbp , % rax
  subq $16 , % rax
