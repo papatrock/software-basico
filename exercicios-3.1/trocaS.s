@@ -13,6 +13,8 @@ troca:
     movq 16(%rbp), %rax # rax = x (endereço)
     movq (%rax), %rbx # rbx = *x (valor)
 
+    movq %rbx, -8(%rbp)
+
     movq 24(%rbp), %rax # rax = y (endereço)
     movq (%rax), %rbx # rbx = *y (valor)
 
@@ -36,7 +38,7 @@ _start:
     call troca
 
     addq $16, %rsp # libera espaço dos parametros
-    movq $25, %rdi
+    movq A, %rdi
     movq $60, %rax
     syscall
 

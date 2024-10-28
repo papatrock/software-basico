@@ -35,7 +35,7 @@ _start :
     pushq % rbp # empilha % rbp
     movq % rsp , % rbp # faz % rbp apontar para novo R.A.
     subq $8 , % rsp # long int x ( em -8(% rbp ))
-    pushq $6 # empilha constante 3
+    pushq $3 # empilha constante 3
     movq % rbp , % rax # % rax := % rbp
     subq $8 , % rax # % rax := % rbp -8 ( endereco de x )
     pushq % rax # empilha endereco de x
